@@ -5,7 +5,7 @@ class Api::ThingsController < ApplicationController
   end
 
   def likes
-    thing = Thing.find(params[:thing_id])
+    thing = Thing.find(params[:things_id])
     thing.update(likes: thing.likes + 1)
     render json: thing
   end
