@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {useState, useEffect} from "react"
 import axios from "axios"
@@ -35,13 +34,15 @@ function App() {
     })
   }
 
+  const renderContent = () => {
   if (loading) {return <p>Loading</p>}
   if (error) {return <p>Loading</p>}
-
+  return renderThings()
+  }
 
   return (
     <div className="App">
-      {renderThings()}
+      {renderContent()}
     </div>
   );
 }
